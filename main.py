@@ -55,6 +55,8 @@ def save():
         finally:
             website_entry.delete(0, END)
             password_entry.delete(0, END)
+
+
 # ---------------------------- Find Password ------------------------------- #
 def find_password():
     website = website_entry.get()
@@ -70,8 +72,9 @@ def find_password():
             messagebox.showinfo(title=website, message=f"Email; {email} \n Password: {password}")
         else:
             messagebox.showinfo(title="Error", message=f"No Details for {website} exists in DB")
-# ---------------------------- UI SETUP ------------------------------- #
 
+
+# ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
 window.config(padx=50, pady=50)
